@@ -5,13 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./login.js"></script>
 </head>
 <body>
     <h1>HELLO NHOM 4TL</h1>
-    <label>Tên Đăng Nhập <input type="text" placeholder="Nhập tên" id="txtUserName"></label></br>
-   
-    <label>Mật Khẩu <input type="text" placeholder="Nhập Password" id="txtPassworld"></label></br>
-    <button id="btnlogin">Đăng nhập</button>
+    <form method="post">
+        <label>Tên Đăng Nhập</label><br>
+        <input type="text" name="username" id="username" /><br>
+        <label>Mật Khẩu </label><br>
+        <input type="password" name="matkhau" id="matkhau"  /><br>
+        <button type="button" onclick="document.getElementById('btn').alert(DN())" id="btn">Đăng Nhập</button>
     
+        </form>
+    <script>
+        function DN(){
+            var u = document.getElementById("username").value;
+            var y = document.getElementById("matkhau").value;
+            var btn = document.getElementById("btn").value;
+            
+            if(u === "admin" && y === "admin"){
+                
+                alert("LOGIN THÀNH CÔNG")
+                window.location.href="../login.html";
+            }else{
+                alert("LOGIN LỖI")
+            }
+        }
+    </script>
 </body>
 </html>
